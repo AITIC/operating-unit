@@ -31,3 +31,8 @@ class AccountInvoiceReport(models.Model):
             ,ai.operating_unit_id
         """
         return group_by_str
+
+    def _select_other_tax(self, sale=False):
+        sub_select = super(AccountInvoiceReport, self)._select_other_tax(sale)
+        sub_select += ", ai.operating_unit_id"
+        return sub_select
