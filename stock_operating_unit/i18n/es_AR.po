@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_operating_unit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20200304\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-10 16:12+0000\n"
+"PO-Revision-Date: 2020-03-10 16:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_warehouse.py:52
+#, python-format
+msgid "Configuration Error. The Operating Unit of the Warehouse and the Location must be the same. "
+msgstr "Error de configuración. La Obra del Almacén y la ubicación deben ser las mismas."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_location.py:52
+#, python-format
+msgid "Configuration error. The Company in the Stock Location and in the Operating Unit must be the same."
+msgstr "Error de configuración. La Empresa en la ubicación de inventario y en la Obra debe ser la misma."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_picking.py:32
+#, python-format
+msgid "Configuration error. The Company in the Stock Picking and in the Operating Unit must be the same."
+msgstr "Error de configuración. La Empresa en el tipo de inventario y en la Obra debe ser la misma."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_warehouse.py:35
+#, python-format
+msgid "Configuration error. The Company in the Stock Warehouse and in the Operating Unit must be the same."
+msgstr "Error de configuración. La Empresa en el Almacén y en la Obra debe ser la misma."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_picking.py:45
+#, python-format
+msgid "Configuration error. The Operating Unit of the picking must be the same as that of the warehouse of the Picking Type."
+msgstr "Error de configuración. La Obra del tipo de inventario debe ser la misma que la del alamcén del tipo de inventario."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_location.py:66
+#, python-format
+msgid "Configuration error. The Parent Stock Location must belong to the same Operating Unit."
+msgstr "Error de configuración. La ubicación del stock principal debe pertenecer a la misma Obra."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_move.py:39
+#, python-format
+msgid "Configuration error. The Stock moves must be related to a location (source or destination) that belongs to the requesting Operating Unit."
+msgstr "Error de configuración. Los movimientos de Stock deben estar relacionados con una ubicación (origen o destino) que pertenece a la Obra solicitante."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_location.py:36
+#: code:addons/stock_operating_unit/model/stock_location.py:41
+#, python-format
+msgid "Configuration error. The operating unit should be assigned to internal locations only."
+msgstr "Error de configuración. La Obra debe asignarse solo a ubicaciones internas."
+
+#. module: stock_operating_unit
+#: code:addons/stock_operating_unit/model/stock_location.py:25
+#, python-format
+msgid "Configuration error. This location is assigned to a warehouse that belongs to a different operating unit."
+msgstr "Error de configuración. Esta ubicación se asigna a un almacén que pertenece a una Obra diferente."
+
+#. module: stock_operating_unit
+#: model:ir.model.fields,field_description:stock_operating_unit.field_stock_move__operating_unit_dest_id
+msgid "Dest. Location Operating Unit"
+msgstr "Dest. Obra de Localización"
+
+#. module: stock_operating_unit
+#: model:ir.model,name:stock_operating_unit.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: stock_operating_unit
+#: model:ir.model,name:stock_operating_unit.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Regla de inventario mínimo"
+
+#. module: stock_operating_unit
+#: model:ir.model.fields,field_description:stock_operating_unit.field_stock_location__operating_unit_id
+#: model:ir.model.fields,field_description:stock_operating_unit.field_stock_rule__operating_unit_id
+#: model:ir.model.fields,field_description:stock_operating_unit.field_stock_warehouse__operating_unit_id
+#: model_terms:ir.ui.view,arch_db:stock_operating_unit.view_picking_internal_search
+msgid "Operating Unit"
+msgstr "Obra"
+
+#. module: stock_operating_unit
+#: model:ir.model.fields,field_description:stock_operating_unit.field_stock_picking__operating_unit_id
+msgid "Requesting Operating Unit"
+msgstr "Obra Solicitante"
+
+#. module: stock_operating_unit
+#: model:ir.model.fields,field_description:stock_operating_unit.field_stock_move__operating_unit_id
+msgid "Source Location Operating Unit"
+msgstr "Ubicación de Origen de Obra"
+
+#. module: stock_operating_unit
+#: model:ir.model,name:stock_operating_unit.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: stock_operating_unit
+#: model:ir.model,name:stock_operating_unit.model_stock_rule
+msgid "Stock Rule"
+msgstr "Regla de Inventario"
+
+#. module: stock_operating_unit
+#: model:ir.model,name:stock_operating_unit.model_stock_picking
+msgid "Transfer"
+msgstr "Comprobante (Albarán)"
+
+#. module: stock_operating_unit
+#: model:ir.model,name:stock_operating_unit.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Almacén"
+
