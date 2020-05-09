@@ -21,9 +21,18 @@ class PurchaseRequestLineMakePurchaseOrder(models.TransientModel):
     def default_get(self, fields):
         res = super(PurchaseRequestLineMakePurchaseOrder, self).\
             default_get(fields)
+        active_model = self.env.context.get('active_model', False)
         request_line_obj = self.env['purchase.request.line']
         request_line_ids = self._context.get('active_ids', [])
         operating_unit_id = False
+        if active_model == 'purchase.request.line':
+            request_line_ids += self.env.context.get('active_ids', [])
+        elif active_model == 'purchase.request':
+            request_ids = self.env.context.get('active_ids', False)
+            request_line_ids += self.env[active_model].browse(
+                request_ids).mapped('line_ids.id')
+        if not request_line_ids:
+            return res
         for line in request_line_obj.browse(request_line_ids):
             line_operating_unit_id = line.request_id.operating_unit_id \
                 and line.request_id.operating_unit_id.id or False
