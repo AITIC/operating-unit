@@ -23,7 +23,7 @@ class PurchaseRequestLineMakePurchaseOrder(models.TransientModel):
             default_get(fields)
         active_model = self.env.context.get('active_model', False)
         request_line_obj = self.env['purchase.request.line']
-        request_line_ids = self._context.get('active_ids', [])
+        request_line_ids = []
         operating_unit_id = False
         if active_model == 'purchase.request.line':
             request_line_ids += self.env.context.get('active_ids', [])
